@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>SPORT CONTENT AI</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">SC</div>
+    <div><strong>SPORT CONTENT AI</strong><small>SPORTS PRODUCTION STUDIO</small></div>
+    <span class="status">DEMO</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR AI SPORTS NEWSROOM</p>
+      <h1>เปลี่ยนข่าวกีฬา<br>ให้เป็นคลิปพร้อมผลิต</h1>
+      <p>วางแผน • เขียนสคริปต์ • เตรียมภาพ • ตัดต่อ • วิเคราะห์</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>เริ่มโปรเจกต์ใหม่</h2><span>01 / PLAN</span></div>
+      <label for="topic">ข่าวหรือหัวข้อกีฬาที่ต้องการทำ</label>
+      <textarea id="topic" rows="4" placeholder="วางเนื้อข่าว ผลการแข่งขัน หรือลิงก์ข่าวที่นี่..."></textarea>
+      <div class="two">
+        <div><label for="duration">ความยาวคลิป</label>
+          <select id="duration"><option value="1">1 นาที</option><option value="2">2 นาที</option><option value="3">3 นาที</option></select></div>
+        <div><label for="format">อัตราส่วนภาพ</label>
+          <select id="format"><option value="9:16">9:16 แนวตั้ง</option><option value="16:9">16:9 แนวนอน</option></select></div>
+      </div>
+      <button id="createBtn" class="primary">สร้างแผนผลิตข่าว</button>
+      <p class="hint">รุ่นเริ่มต้น: บันทึกงานในเครื่องและสร้างโครงร่างการผลิต ยังไม่ได้เชื่อม AI API</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>ขั้นตอนการผลิต</h2><span>WORKFLOW</span></div>
+      <div class="steps">
+        <article><b>1</b><div><strong>PLAN</strong><small>วางแผนและตรวจสอบข้อมูลข่าว</small></div><em>พร้อมเริ่ม</em></article>
+        <article><b>2</b><div><strong>CREATE</strong><small>สคริปต์ ภาพ เสียง และวิดีโอ</small></div><em>รอข้อมูล</em></article>
+        <article><b>3</b><div><strong>PUBLISH</strong><small>ปก พาดหัว และคำอธิบาย</small></div><em>รอผลิต</em></article>
+        <article><b>4</b><div><strong>OPTIMIZE</strong><small>วิเคราะห์ยอดดูและการรับชม</small></div><em>รอเผยแพร่</em></article>
+      </div>
+    </section>
+
+    <section class="panel" id="resultPanel" hidden>
+      <div class="section-head"><h2>แผนงานของคุณ</h2><span>PROJECT</span></div>
+      <div id="result"></div>
+      <button id="copyBtn" class="secondary">คัดลอกแผนงาน</button>
+      <button id="saveBtn" class="secondary">บันทึกโปรเจกต์</button>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>โปรเจกต์ที่บันทึก</h2><span>LOCAL</span></div>
+      <div id="saved" class="saved-empty">ยังไม่มีโปรเจกต์ที่บันทึก</div>
+    </section>
+  </main>
+  <nav class="bottom-nav"><a class="active" href="#top">หน้าหลัก</a><a href="#resultPanel">โปรเจกต์</a><a href="#saved">คลังงาน</a></nav>
+  <script src="app.js"></script>
+</body>
+</html>
